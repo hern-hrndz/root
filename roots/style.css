@@ -1,0 +1,191 @@
+:root {
+  /* colors */
+  --clr-base-0: hsl(0, 0%, 100%);
+  --clr-base-100: hsl(0, 0%, 90%);
+  --clr-base-200: hsl(0, 0%, 80%);
+
+  /* accents */
+  --clr-blue-500: hsl(217, 31%, 28%);
+  --clr-red-500: hsl(20, 46%, 39%);
+
+  --ff-black-500: hsl(0, 0%, 0%);
+  --ff-gray-500: hsl(0, 0%, 50%);
+  --ff-gray-600: hsl(0, 0%, 65%);
+
+  /* extras */
+  --ff-body: var(--ff-black-500);
+
+  /* font */
+  --ff-primary: 'Roboto', sans-serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-medium-bold: 500;
+  --fw-bold: 700;
+
+  /* font sizes */
+  --fs-primary: 16px;
+  --fs-secondary-lg: 18px;
+  --fs-secondary-sm: 14px;
+  --fs-tercerary: 21px;
+
+  /* to do: fontsize: body and navbar sizing might not needed? */
+  /* --fs-body:
+  --fs-nav: 
+  --fs-button: */
+
+}
+
+/* to do resizing */
+/* 
+@media (min-width: 50em) {
+  :root {}
+} */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+  have it above so commented out
+*/
+/* input,
+button,
+textarea,
+select {
+  font: inherit;
+} */
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* utility classes */
+
+/* text colors */
+.txt-clr-black {
+  color: var(--ff-black-500);
+}
+
+.txt-clr-white {
+  color: var(--clr-base-200);
+}
+
+.txt-accent-clr-blue {
+  color: var(--clr-blue-500);
+}
+
+.txt-accent-clr-red {
+  color: var(--clr-red-500);
+}
+
+.txt-accent-clr-gray {
+  color: var(--ff-gray-500);
+}
+
+/* backgroudn colors */
+.bg-clr-black {
+  background-color: var(--ff-black-500);
+}
+
+.bg-clr-white {
+  background-color: var(--clr-base-200);
+}
+
+.bg-accent-clr-blue {
+  background-color: var(--clr-blue-500);
+}
+
+.bg-accent-clr-red {
+  background-color: var(--clr-red-500);
+}
+
+.bg-accent-clr-gray {
+  background-color: var(--ff-gray-500);
+}
+
+
+
+/* font weights */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+/* font sizes */
+.fs-headings {
+  font-size: var(--fs-secondary-lg);
+}
+
+.fs-regular {
+  font-size: var(--fs-primary);
+}
