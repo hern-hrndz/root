@@ -6,8 +6,6 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css"> -->
   <script src="https://kit.fontawesome.com/c03ec31dc2.js" crossorigin="anonymous"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,129 +14,133 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
   </style>
+
   <title>Vite App</title>
 </head>
 
-<!-- navbar -->
-<header class="primary-header">
-  <div class="nav-container">
-    <img src="assets/images/Trees.png" alt="logo" />
-    <a href="#">Teem</a>
-    <!-- ariacontrols links to ui -->
-    <button class="mobile-nav-toggle" aria-controls="primary-navigation">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-      <i class="fa fa-times" aria-hidden="true"></i>
-      <span class="visually-hidden">Menu</i></span>
-    </button>
-
-    <nav class="primary-navigation" aria-label="menu">
-      <ul aria-label="Primary" id="primary-navigation" role="list" class="nav-list">
-        <li><a href="#">Focus</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
-    <button class="button">Get Started</button>
-  </div>
-</header>
-
-
-<main>
-  <!-- intro columns -->
-  <section class="padding-block-900">
-    <div class="container">
-      <div class="two-column">
-        <div>
-          <h1 class="fw-bold fs-headings txt-accent-clr-blue">Accountabilty at a Fun Level</h1>
-          <p>Work an an accountable way, with friends or anyone you make a connection</p>
-          <button class="button">Get Started</button>
-        </div>
-
-        <div>
-          <img src="assets/images/main.png" alt="notionCopy">
-        </div>
-      </div>
-  </section>
-  <!-- mid columns -->
-  <section class="padding-block-900">
-    <div class="container">
-      <div class="two-column">
-        <div>
-          <img src="assets/images/main.png" alt="working-sample">
-        </div>
-        <div>
-          <img src="assets/images/Trees.png" alt="small-aesthetic-pic">
-          <h1 class="fs-headings fw-bold txt-accent-clr-blue">Team Up to accomplish tasks</h1>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- bottom get started button maybe with just a small image-->
-  <section class="padding-block-900">
-    <div class="container">
-      <div class="three-column">
-        <div>
-          <img src="assets/images/girl.png" alt="girl-img">
-        </div>
-        <div>
-          <p>Stop Procrasitation with your Friends</p>
-          <button class="button">Get Started</button>
-        </div>
-        <div>
-          <img src="assets/images/boy.png" alt="boy-img">
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="padding-block-500 bg-clr-black txt-accent-clr-gray">
-  <div class="container">
-    <div class="two-column">
-      <div>
-        <a href="#"><img src="" alt="logo"></a>
-        <ul role="list" aria-label="Social links">
-          <li><a aria-label="instagram" href="http://instagram"></a></li>
-          <li><a aria-label="twitter" href="http://twitter"></a></li>
-          <li><a aria-label="Discord" href="http://Discord"></a></li>
-          <li><a aria-label="Youtube" href="http://youtube"></a></li>
-        </ul>
-      </div>
-
-      <div>
-        <nav class="footer-nav">
-          <ul role="list" aria-label="Footer">
-            <p>Product</p>
-            <li><a href="#"></a>Overview</li>
-            <li><a href="#"></a>Community</li>
-            <li><a href="#"></a></li>
-            <p>Company</p>
-            <li><a href=""></a>About Us</li>
-            <li><a href=""></a>Contact Us</li>
-          </ul>
-        </nav>
-      </div>
-
-      <div>
-        <nav class="secondary-nav">
-          <ul role="list" aria-label="secondary-footer">
-            <li><a href="#"></a>Dark Mode</li>
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-
-            <li><a href="#"></a>©2022 Root Labs, Inc.</li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-
-</footer>
-
 <body>
+  <!-- navbar -->
+  <header class="primary-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#"><img src="assets/images/logo-48.png" alt="logo" /></a>
+        <!-- ariacontrols links to ui -->
+        <button class="mobile-nav-toggle" id="nav-button" aria-controls="primary-navigation" aria-expanded="false">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <span class="visually-hidden">Menu</i></span>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation" aria-label="menu">
+          <ul aria-label="Primary" role="list" class="nav-list">
+            <li><a href="#">Focus</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <!-- <button class="button">Get Started</button> -->
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- intro columns -->
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="two-column">
+          <div>
+            <h1 class="fw-bold fs-headings txt-accent-clr-blue">Accountabilty at a Fun Level</h1>
+            <p>Work an an accountable way, with friends or anyone you make a connection</p>
+            <button class="button">Get Started</button>
+          </div>
+
+          <div>
+            <img src="assets/images/main.png" alt="notionCopy">
+          </div>
+        </div>
+    </section>
+    <!-- mid columns -->
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="two-column">
+          <div>
+            <img src="assets/images/main.png" alt="working-sample">
+          </div>
+          <div>
+            <img src="assets/images/Trees.png" alt="small-aesthetic-pic">
+            <h1 class="fs-headings fw-bold txt-accent-clr-blue">Team Up to accomplish tasks</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- bottom get started button maybe with just a small image-->
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="three-column">
+          <div>
+            <img src="assets/images/girl.png" alt="girl-img">
+          </div>
+          <div>
+            <p>Stop Procrasitation with your Friends</p>
+            <button class="button">Get Started</button>
+          </div>
+          <div>
+            <img src="assets/images/boy.png" alt="boy-img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="padding-block-500 bg-clr-black txt-accent-clr-gray">
+    <div class="container">
+      <div class="two-column">
+        <div>
+          <a href="#"><img src="" alt="logo"></a>
+          <ul role="list" aria-label="Social links">
+            <li><a aria-label="instagram" href="http://instagram"></a></li>
+            <li><a aria-label="twitter" href="http://twitter"></a></li>
+            <li><a aria-label="Discord" href="http://Discord"></a></li>
+            <li><a aria-label="Youtube" href="http://youtube"></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <nav class="footer-nav">
+            <ul role="list" aria-label="Footer">
+              <p>Product</p>
+              <li><a href="#"></a>Overview</li>
+              <li><a href="#"></a>Community</li>
+              <li><a href="#"></a></li>
+              <p>Company</p>
+              <li><a href=""></a>About Us</li>
+              <li><a href=""></a>Contact Us</li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <nav class="secondary-nav">
+            <ul role="list" aria-label="secondary-footer">
+              <li><a href="#"></a>Dark Mode</li>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+
+              <li><a href="#"></a>©2022 Root Labs, Inc.</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

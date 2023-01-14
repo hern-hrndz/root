@@ -11,18 +11,20 @@
   --clr-red-600: hsl(4, 43%, 35%);
   --clr-red-700: hsl(4, 43%, 40%);
   --clr-red-800: hsl(4, 43%, 45%);
-  --clr-green-400: hsl(68, 29%, 29%);
+  --clr-green-400: hsl(67, 28%, 29%);
   --clr-neutral-400: hsl(43, 19%, 93%);
   --clr-neutral-500: hsl(43, 19%, 85%);
-  --ff-black-500: hsl(0, 0%, 0%);
-  --ff-gray-500: hsl(0, 0%, 50%);
-  --ff-gray-600: hsl(0, 0%, 65%);
+  --clr-black-500: hsl(0, 0%, 0%);
+  --clr-gray-500: hsl(0, 0%, 50%);
+  --clr-gray-600: hsl(0, 0%, 65%);
 
   /* extras */
-  --ff-body: var(--ff-black-500);
+  /* --ff-body: var(--ff-black-500); */
+
 
   /* font */
-  --ff-primary: 'Roboto', sans-serif;
+  --ff-primary: 'Roboto',
+    sans-serif;
 
   /* font weights */
   --fw-regular: 400;
@@ -36,6 +38,8 @@
   --fs-tercerary: 21px;
 
   /* space padding */
+  --size-100: .1rem;
+  --size-200: .25rem;
   --size-300: .5rem;
   --size-400: .75rem;
   --size-500: 1rem;
@@ -51,6 +55,8 @@
   --fs-button: */
 
 }
+
+
 
 /* to do resizing */
 /* 
@@ -74,6 +80,12 @@
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 /*
@@ -255,42 +267,119 @@ h6 {
   grid-template-columns: 80%, 20%;
 } */
 
+
 @media (min-width: 50em) {
   .two-column {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+}
 
-  /* .two-column-right {}
+
+/* .two-column-right {}
 } */
 
 
-  /* general styling */
-  body {
-    font-size: var(--fs-primary);
-    font-family: var(--ff-primary);
-    color: var(--ff-black-500)
+/* general styling */
+body {
+  font-size: var(--fs-primary);
+  font-family: var(--ff-primary);
+  color: var(--ff-black-500)
+}
+
+.button {
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 100vmax;
+  /* padding: 1.25em, 2.5em; */
+  padding: 1.2em 2.5em;
+  font-weight: var(--fw-medium-bold);
+  font-size: var(--fs-primary);
+  line-height: 1;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-red-500);
+  box-shadow: 0 1em 1em -1em var(--clr-red-700);
+
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--clr-neutral-500);
+  background-color: var(--clr-red-700);
+}
+
+/* navigation */
+.primary-header {
+  margin-top: var(--size-700);
+
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  font-size: var(--fs-tercerary);
+}
+
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+    position: fixed;
+    padding: var(--size-800);
+    inset: 7rem var(--size-500) auto;
+    background: var(--clr-neutral-400);
+    border-radius: var(--size-200);
+    box-shadow: 0 0 .5em rgb(0, 0, 0.1);
+    transition: height 0.3s ease-in-out;
   }
 
-  .button {
-    border: 0;
-    cursor: pointer;
+  .nav-list {
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+    font-size: var(--fs-tercerary);
+    font-weight: var(--fw-medium-bold)
+  }
+
+  .nav-list a {
     text-decoration: none;
-    border-radius: 100vmax;
-    /* padding: 1.25em, 2.5em; */
-    padding: 1.2em 2.5em;
-    font-weight: var(--fw-medium-bold);
-    font-size: var(--fs-primary);
-    line-height: 1;
-    color: var(--clr-neutral-400);
-    background-color: var(--clr-red-500);
-    box-shadow: 0 1em 1em -1em var(--clr-red-700);
+    color: var(--clr-black-500);
+  }
 
+  .nav-list a:hover,
+  .nav-list a:focus {
+    /* text-decoration: none; */
+    color: var(--clr-blue-500);
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
 
   }
 
-  .button:hover,
-  .button:focus-visible {
-    color: var(--clr-neutral-500);
-    background-color: var(--clr-red-700);
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 1px 4px;
   }
+
+  .mobile-nav-toggle .fa-bars {}
+
+  .mobile-nav-toggle .fa-times {
+    display: none;
+  }
+
+  /* .opened {
+    display: block;
+  } */
+}
