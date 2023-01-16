@@ -355,7 +355,7 @@ body {
     left: 0;
     padding-top: var(--size-900);
     overflow-x: hidden;
-    transition: .5s;
+    transition: 0.5s;
     background: var(--clr-neutral-400);
     box-shadow: 0 0 .5em rgb(0, 0, 0.1);
   }
@@ -406,16 +406,13 @@ body {
     display: none;
     /* initially hide the icon */
     position: absolute;
-    /* position the icon on top of the navigation */
-    top: var(--size-300);
-    /* adjust the top positioning */
-    right: var(--size-300);
-    /* adjust the right positioning */
+    top: var(--size-500);
+    right: var(--size-500);
     cursor: pointer;
-    /* change cursor to pointer */
   }
 
-  /* .opened {
-    display: block;
-  } */
+  .no-scroll {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
