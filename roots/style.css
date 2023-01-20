@@ -151,16 +151,16 @@ h6 {
 }
 
 
-.container {
+/* .container {
   --max-width: 1110px;
-  --padding: 1rem;
+  --padding: 1rem; */
 
-  /* choose smaller between max-width or 100  */
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
+/* choose smaller between max-width or 100  */
+/* width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
-}
+} */
 
-.three-column {
+/* .three-column {
   display: grid;
   gap: 16px;
   grid-auto-flow: column;
@@ -169,7 +169,7 @@ h6 {
 .two-column {
   display: grid;
   gap: 16px;
-}
+} */
 
 /* .two-column-right {
 display: grid;
@@ -178,7 +178,7 @@ grid-template-columns: 80%, 20%;
 } */
 
 
-@media (min-width: 50em) {
+/* @media (min-width: 50em) {
   .two-column {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -191,7 +191,7 @@ grid-template-columns: 80%, 20%;
   .primary-navigation .display-md-inline-flex {
     display: inline-flex;
   }
-}
+} */
 
 
 /* .two-column-right {}
@@ -370,6 +370,70 @@ body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+
+.container {
+  --max-width: 1200px;
+  --padding: 1rem;
+
+  /* choose smaller between max-width or 100  */
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  /* text-align: center; */
+}
+
+.container-divider {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: radial-gradient(circle, var(--clr-gray-500), var(--clr-neutral-500)) 1;
+}
+
+.three-column {
+  display: grid;
+  gap: 16px;
+  grid-auto-flow: column;
+  text-align: center;
+  align-items: center;
+}
+
+.two-column {
+  display: grid;
+  gap: 16px;
+}
+
+.second-container-styling {
+  text-align: center;
+  align-items: center;
+
+}
+
+/* adding spacing */
+:where(.flow :not(:first-child)) {
+  /* outline: 4px solid rebeccapurple; */
+  margin-top: var(--flow-spacer, 1em);
+}
+
+/* .two-column-right {
+display: grid;
+gap: 16px;
+grid-template-columns: 80%, 20%;
+} */
+
+
+@media (min-width: 50em) {
+  .two-column {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .primary-navigation .fa-times {
+    display: none;
+  }
+
+  .primary-navigation .display-md-inline-flex {
+    display: inline-flex;
+  }
 }
 
 /* text colors */
